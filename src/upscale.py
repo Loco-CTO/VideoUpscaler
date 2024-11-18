@@ -1,8 +1,13 @@
-import torch, os, cv2, shutil
-from tqdm import tqdm
+import os
+import shutil
+
+import cv2
+import torch
+from moviepy.editor import ImageClip, ImageSequenceClip, VideoFileClip
 from PIL import Image
+from tqdm import tqdm
+
 from .RealESRGAN import RealESRGAN
-from moviepy.editor import VideoFileClip, ImageSequenceClip, ImageClip
 
 
 def extract_audio(video, filename):

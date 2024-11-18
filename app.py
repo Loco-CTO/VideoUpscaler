@@ -1,8 +1,14 @@
-import os, customtkinter, queue, shutil, yaml
-from src.upscale import upscale
-from threading import Thread, RLock
-from PIL import Image
+import os
+import queue
+import shutil
+from threading import RLock, Thread
+
+import customtkinter
+import yaml
 from customtkinter import StringVar
+from PIL import Image
+
+from src.upscale import upscale
 
 with open("lang.yaml", "r", encoding="utf8") as stream:
     langs = yaml.safe_load(stream)
