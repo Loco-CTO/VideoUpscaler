@@ -217,10 +217,12 @@ class App(customtkinter.CTk):
         self.refresh_button_event()
         self.select_all_event()
 
-    def open_input_folder(self):
+    @staticmethod
+    def open_input_folder():
         os.startfile(os.path.realpath("./input"))
 
-    def open_output_folder(self):
+    @staticmethod
+    def open_output_folder():
         os.startfile(os.path.realpath("./output"))
 
     def change_language(self, new_langauge: str):
@@ -252,7 +254,8 @@ class App(customtkinter.CTk):
                 textvariable=self.lang_texts["start_upscale"],
             )
 
-    def change_appearance_mode_event(self, new_appearance_mode: str):
+    @staticmethod
+    def change_appearance_mode_event(new_appearance_mode: str):
         customtkinter.set_appearance_mode(new_appearance_mode)
 
     def select_all_event(self):
