@@ -1,11 +1,8 @@
 import os
-
-import cv2
 import numpy as np
 import torch
 from huggingface_hub import cached_download, hf_hub_url
 from PIL import Image
-from torch.nn import functional as F
 
 from .rrdbnet_arch import RRDBNet
 from .utils import (

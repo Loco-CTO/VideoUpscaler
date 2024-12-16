@@ -1,9 +1,5 @@
-import io
-import os
 
 import numpy as np
-import torch
-from PIL import Image
 
 
 def pad_reflect(image, pad_size):

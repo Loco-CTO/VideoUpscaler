@@ -3,7 +3,7 @@ import shutil
 
 import cv2
 import torch
-from moviepy.editor import ImageClip, ImageSequenceClip, VideoFileClip
+from moviepy.editor import ImageSequenceClip, VideoFileClip
 from PIL import Image
 from tqdm import tqdm
 
