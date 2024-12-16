@@ -135,7 +135,7 @@ def stich_together(patches, padded_image_shape, target_shape, padding_size=4):
 
     row = -1
     col = 0
-    for i in range(len(patches)):
+    for i, item in enumerate(patches):
         if i % n_patches_per_row == 0:
             row += 1
             col = 0
@@ -143,6 +143,6 @@ def stich_together(patches, padded_image_shape, target_shape, padding_size=4):
             row * patch_size : (row + 1) * patch_size,
             col * patch_size : (col + 1) * patch_size,
             :,
-        ] = patches[i]
+        ] = item
         col += 1
     return complete_image[0 : target_shape[0], 0 : target_shape[1], :]
