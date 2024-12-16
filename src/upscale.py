@@ -91,7 +91,7 @@ def upscale(video, filename, model):
 
     progress.close()
 
-    print(f"Concatenating Video...")
+    print("Concatenating Video...")
 
     clips = []
     fps = info[1]

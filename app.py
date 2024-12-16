@@ -13,16 +13,16 @@ from src.upscale import upscale
 with open("lang.yaml", "r", encoding="utf8") as stream:
     langs = yaml.safe_load(stream)
 
-if not os.path.exists(f"./input"):
-    os.mkdir(f"./input")
-if not os.path.exists(f"./output"):
-    os.mkdir(f"./output")
-if not os.path.exists(f"./weights"):
-    os.mkdir(f"./weights")
+if not os.path.exists("./input"):
+    os.mkdir("./input")
+if not os.path.exists("./output"):
+    os.mkdir("./output")
+if not os.path.exists("./weights"):
+    os.mkdir("./weights")
 
-if os.path.exists(f"./temp"):
-    shutil.rmtree(f"./temp")
-os.mkdir(f"./temp")
+if os.path.exists("./temp"):
+    shutil.rmtree("./temp")
+os.mkdir("./temp")
 
 customtkinter.set_appearance_mode("System")
 customtkinter.set_default_color_theme("green")
