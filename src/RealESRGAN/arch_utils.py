@@ -127,7 +127,8 @@ def flow_warp(
     Returns:
         Tensor: Warped image or feature map.
     """
-    assert x.size()[-2:] == flow.size()[1:3]
+    if x.size()[-2:] != flow.size()[1:3]:
+        raise AssertionError
     _, _, h, w = x.size()
     # create mesh grid
     grid_y, grid_x = torch.meshgrid(
@@ -210,7 +211,8 @@ def pixel_unshuffle(x, scale):
     """
     b, c, hh, hw = x.size()
     out_channel = c * (scale**2)
-    assert hh % scale == 0 and hw % scale == 0
+    if not (hh % scale == 0 and hw % scale == 0):
+        raise AssertionError
     h = hh // scale
     w = hw // scale
     x_view = x.view(b, c, h, scale, w, scale)
