@@ -111,5 +111,3 @@ def upscale(video, filename, model):
     shutil.rmtree(f"./temp/{filename}/")
 
     print(f"Finished {filename}!")
-
-    return
