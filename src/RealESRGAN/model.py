@@ -51,7 +51,9 @@ class RealESRGAN:
                 4,
                 8,
             ]:
-                raise AssertionError("You can download models only with scales: 2, 4, 8")
+                raise AssertionError(
+                    "You can download models only with scales: 2, 4, 8"
+                )
             config = HF_MODELS[self.scale]
             cache_dir = os.path.dirname(model_path)
             local_filename = os.path.basename(model_path)
