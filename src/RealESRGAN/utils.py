@@ -55,12 +55,11 @@ def pad_patch(image_patch, padding_size, channel_last=True):
             ((padding_size, padding_size), (padding_size, padding_size), (0, 0)),
             "edge",
         )
-    else:
-        return np.pad(
-            image_patch,
-            ((0, 0), (padding_size, padding_size), (padding_size, padding_size)),
-            "edge",
-        )
+    return np.pad(
+        image_patch,
+        ((0, 0), (padding_size, padding_size), (padding_size, padding_size)),
+        "edge",
+    )
 
 
 def unpad_patches(image_patches, padding_size):
